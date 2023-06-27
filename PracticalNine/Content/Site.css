@@ -1,8 +1,18 @@
 ﻿/* Set padding to keep content from hitting the edges */
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: 100vh;
+}
+
 .body-content {
     margin-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
+    height:
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 

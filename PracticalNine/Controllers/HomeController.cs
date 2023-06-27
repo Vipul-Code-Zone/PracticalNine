@@ -13,10 +13,8 @@ namespace PracticalNine.Controllers
 			return View();
 		}
 
-		public ActionResult About()
+		public ActionResult Test2()
 		{
-			ViewBag.Message = "Your application description page.";
-
 			return View();
 		}
 
