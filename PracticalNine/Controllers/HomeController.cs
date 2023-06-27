@@ -18,6 +18,12 @@ namespace PracticalNine.Controllers
 			return View();
 		}
 
+		public ActionResult Test3()
+		{
+			ViewBag.Message = "Hello World";
+			return View();
+		}
+
 		public ActionResult Contact()
 		{
 			ViewBag.Message = "Your contact page.";

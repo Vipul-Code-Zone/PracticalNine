@@ -26,16 +26,16 @@ namespace PracticalNine.Tests.Controllers
 		}
 
 		[TestMethod]
-		public void About()
+		public void Test3()
 		{
 			// Arrange
 			HomeController controller = new HomeController();
 
 			// Act
-			ViewResult result = controller.Test2() as ViewResult;
+			ViewResult result = controller.Test3() as ViewResult;
 
 			// Assert
-			Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+			Assert.AreEqual("Hello World", result.ViewBag.Message);
 		}
 
 		[TestMethod]
