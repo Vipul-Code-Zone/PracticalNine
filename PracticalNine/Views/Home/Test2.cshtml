@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Test 2";
+}
+
+<main aria-labelledby="title" class="h-100 d-flex align-items-center">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <button type="button" id="print" class="w-100 btn btn-success my-2">PRINT TEXT</button>
+                <button type="button" id="bold" class="w-100 btn btn-primary my-2">BOLD</button>
+                <button type="button" id="italic" class="w-100 btn btn-primary my-2">ITALIC</button>
+                <button type="button" id="underline" class="w-100 btn btn-primary my-2">UNDERLINE</button>
+                <button type="button" id="reset" class="w-100 btn btn-warning my-2">RESET</button>
+            </div>
+
+            <div class="col-8 d-flex align-items-center justify-content-center">
+                <label id="lblText" class="mt-4 text-center fs-1"></label>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<script>
+    const lblElement = document.getElementById("lblText");
+    const btnElements = document.querySelectorAll('.btn');
+
+    btnElements.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            handleBtnClick(e.target.id);
+        })
+    })
+
+    function handleBtnClick(btnId) {
+        switch (btnId) {
+            case 'print':
+                lblElement.innerText = "Hello World";
+                break;
+            case 'bold':
+                lblElement.style.fontWeight = 'bold';
+                break;
+            case 'italic':
+                lblElement.style.fontStyle = 'italic';
+                break;
+            case 'underline':
+                lblElement.style.textDecoration = 'underline';
+                break;
+            case 'reset':
+                lblElement.style = 'none';
+                break;
+            default:
+                break;
+        }
+
+    }
+</script>
